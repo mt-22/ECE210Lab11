@@ -15,7 +15,7 @@ for i in range(len(data)-1):
         y.append(float(data['CH2'][i+1]))
 
 def objective(x, k):
-    return (k/2)*(x-V_t)**2
+    return 100*(k/2)*(x-V_t)**2
 
 k, _ = curve_fit(objective, x, y)
 k = k[0]
